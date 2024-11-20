@@ -1,0 +1,58 @@
+@use './_variables.scss' as *;
+@use './header.scss' as *;
+@use './general.scss' as *;
+@use './section.scss' as *;
+@use './services.scss' as *;
+@use './footer.scss' as *;
+@use './sucursales.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url($services_background);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+
+h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: $darkGray;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+@media screen and (max-width:380px) {
+    h2 {
+        font-size: 10vw;
+        line-height: 2.5rem;
+    }
+    
+    p {
+        font-size: 3.5vw;
+    }
+}

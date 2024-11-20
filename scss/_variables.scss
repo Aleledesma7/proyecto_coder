@@ -1,0 +1,53 @@
+$white: #fff;
+$lightWhite: #fffdfc;
+$softGray: #f9fafc;
+$gray: #e1e2e5b3;
+$darkGray: #323337;
+$black: #000;
+$bordo: #b41e00;
+$tomato: tomato;
+$bage: #eaccb3;
+
+$transparentBlack20p: rgba(0,0,0,0.2);
+$transparentBlack40p: rgba(0,0,0,0.4);
+$transparentBlack60p: rgba(0,0,0,0.6);
+
+$services_background: "../img/services_background.jpg";
+$sucursales: "../img/sucursales.jpg";
+$metodos_pago: "../img/metodos_pago.jpg";
+$ventas: "../img/ventas.jpg";
+
+@mixin flexBox($direction, $items, $content, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $items;
+    justify-content: $content;
+    gap: $gap;
+}
+
+@mixin transitionButton() {
+    transition: color 180ms ease-in, scale 100ms ease-in;
+}
+
+@mixin buttonHover($bgColor, $color) {
+    background-color: $bgColor;
+    color: $color;
+    scale: 1.1;
+}
+
+@mixin buttonClicked() {
+    scale: 0.9;
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+

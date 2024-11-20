@@ -1,0 +1,54 @@
+@use './_variables.scss' as *;
+
+.servicios {
+    @include flexBox(column, center, center, 1rem);
+    padding: 100px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 55px;
+        line-height: 70px;
+        color: $softGray;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 16px;
+        color: $gray;
+        margin-bottom: 50px;
+        padding: 0 100px;
+    }
+
+    .servicios-group {
+        @include flexBox(row, normal, space-between, 1rem);
+
+        .servicios-1 {
+            padding: 0 100px;
+
+            img {
+                width: 25px;
+                margin-bottom: 15px;
+            }
+
+            h3 {
+                color: $bage;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .servicios {
+        .servicios-group {
+            flex-direction: column;
+            margin-bottom: 0;
+            .servicios-1 {
+                margin-bottom: 25px;
+            }
+        }
+        p {
+            padding: 0 20px;
+        }
+    }
+}

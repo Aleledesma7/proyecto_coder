@@ -1,0 +1,47 @@
+@use './_variables.scss' as *;
+
+.footer {
+    @include flexBox(row, center, space-between, inherit);
+    background-color: $black;
+    padding: 12px 25px;
+
+    .footer-content {
+        @include flexBox(row, normal, space-between, 2rem);
+        flex: 0.5;
+
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 4rm;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: $softGray;
+            margin-bottom: 15px;
+        }
+
+        a {
+            font-size: 16px;
+            color: $softGray;
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .footer {
+        @include flexBox(column, normal, normal, inherit);
+        flex: 1;
+        .footer-content {
+            @include flexBox(row, normal, space-between, inherit);
+            text-align: center;
+            a{
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+}

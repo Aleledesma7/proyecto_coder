@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzeria Sizza</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="scss/index.css">
     <link rel="icon" href="img/ico.png">
 </head>
 
 <body>
+    <div class="menu">
+        <img src="./img/logo.png" class="logo">
+        <input type="checkbox" id="menu" name="menu" />
+        <label for="menu">
+            <img src="./img/menu.png" class="menu-icono" alt=>
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#carta">Menu</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sucursales">Sucursales</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
-        <div class="menu container">
-            <img src="./img/logo.png" class="logo">
-            <input type="checkbox" id="menu" />
-            <label for="menu">
-                <img src="/img/menu.png" class="menu-icono" alt=>
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#carta">Menu</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#sucursales">Sucursales</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-content container">
+        <div class="header-content">
             <h1>The pizza sizza</h1>
             <p>
                 Somos una pizzería apasionada por ofrecer pizzas de calidad, con masa artesanal e ingredientes frescos.
@@ -36,9 +36,9 @@
     </header>
 
     <section id="carta" class="pizza">
-        <img class="pizza-img" src="img/cebollas.png" alt="">
+        <img class="pizza-img" src="./img/cebollas.png" alt="">
 
-        <div class="pizza-content container">
+        <div class="pizza-content">
 
             <h2>Menu</h2>
             <p class="txt-p">En nuestra pizzería, cada pizza es una experiencia única, elaborada con masa artesanal,
@@ -100,31 +100,30 @@
     </section>
 
     <main id="servicios" class="servicios">
-        <div class="servicios-content container">
-            <h2>Servicios</h2>
+        <h2>Servicios</h2>
 
-            <div class="servicios-group">
+        <div class="servicios-group">
 
-                <div class="servicios-1">
-                    <img src="img/home.svg" alt="">
-                    <h3>Sucursales</h3>
-                </div>
-                <div class="servicios-1">
-                    <img src="img/shopping-bag.svg" alt="">
-                    <h3>Ventas online</h3>
-                </div>
-                <div class="servicios-1">
-                    <img src="img/dollar-sign.svg" alt="">
-                    <h3>Métodos de pago</h3>
-                </div>
+            <div class="servicios-1">
+                <img src="img/home.svg" alt="">
+                <h3>Sucursales</h3>
             </div>
-            <p>
-                En nuestra pizzería, ofrecemos una experiencia gastronómica única con pizzas hechas a mano, utilizando
-                ingredientes frescos y de calidad. Además de nuestras deliciosas opciones de pizza, también brindamos
-                servicio a domicilio, catering para eventos y opciones personalizadas para que disfrutes de tu pizza
-                favorita en el lugar que prefieras. ¡Tu satisfacción es nuestra prioridad!
-            </p>
+            <div class="servicios-1">
+                <img src="img/shopping-bag.svg" alt="">
+                <h3>Ventas online</h3>
+            </div>
+            <div class="servicios-1">
+                <img src="img/dollar-sign.svg" alt="">
+                <h3>Métodos de pago</h3>
+            </div>
         </div>
+
+        <p>
+            En nuestra pizzería, ofrecemos una experiencia gastronómica única con pizzas hechas a mano, utilizando
+            ingredientes frescos y de calidad. Además de nuestras deliciosas opciones de pizza, también brindamos
+            servicio a domicilio, catering para eventos y opciones personalizadas para que disfrutes de tu pizza
+            favorita en el lugar que prefieras. ¡Tu satisfacción es nuestra prioridad!
+        </p>
     </main>
 
     <section class="general">
@@ -241,16 +240,13 @@
     </section>
 
     <footer class="footer">
-        <p>© 2024 Pizzería Venezia S.A. Todos los derechos reservados.</p>
+        <p>© 2024 The Pizza Sizza S.A. Todos los derechos reservados.</p>
         <div class="footer-content">
-
-            <div class="link">
-                <a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">Facebook</a>
-                <a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">Instagram</a>
-                <a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">WhatsApp</a>
-                ><a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">X</a>
-            </div>
+            <a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">Facebook</a>
+            <a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">Instagram</a>
+            <a href="https://www.linkedin.com/in/alejandro-ledesma-79320a1a1/">WhatsApp</a>
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,0 +1,63 @@
+@keyframes logoAnimation {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 100px 0;
+  text-align: center;
+}
+.servicios h2 {
+  font-size: 55px;
+  line-height: 70px;
+  color: #f9fafc;
+  text-transform: uppercase;
+}
+.servicios p {
+  font-size: 16px;
+  color: rgba(225, 226, 229, 0.7019607843);
+  margin-bottom: 50px;
+  padding: 0 100px;
+}
+.servicios .servicios-group {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.servicios .servicios-group .servicios-1 {
+  padding: 0 100px;
+}
+.servicios .servicios-group .servicios-1 img {
+  width: 25px;
+  margin-bottom: 15px;
+}
+.servicios .servicios-group .servicios-1 h3 {
+  color: #eaccb3;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .servicios .servicios-group {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .servicios .servicios-group .servicios-1 {
+    margin-bottom: 25px;
+  }
+  .servicios p {
+    padding: 0 20px;
+  }
+}/*# sourceMappingURL=services.css.map */

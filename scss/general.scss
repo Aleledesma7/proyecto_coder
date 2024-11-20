@@ -1,0 +1,80 @@
+@use './_variables.scss' as *;
+
+.general {
+    @include flexBox(column, normal, normal, inherit);
+
+    .general-inf_container {
+        @include flexBox(row, normal, normal, inherit);
+
+        .general-1 {
+            width: 50%;
+            min-height: 70vh;
+            padding: 50px 50px 50px 50px;
+            background-color: $gray;
+
+            .btn-1 {
+                display: inline-block;
+                padding: 11px 35px;
+                background-color: $bordo;
+                color: $softGray;
+                text-transform: uppercase;
+                @include transitionButton();
+            }
+
+            .btn-1:hover {
+                @include buttonHover($tomato, $lightWhite);
+            }
+
+            .btn-1:active {
+                @include buttonClicked();
+            }
+        }
+
+        .sucursales {
+            background-image: url($sucursales);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+        }
+
+        .ventas {
+            background-image: url($ventas);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+        }
+
+        .metodos_pago {
+            background-image: url($metodos_pago);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+        }
+    }
+}
+
+@media(max-width:991px) {
+
+    .general {
+        width: 100vw;
+        flex-direction: column;
+
+        .general-inf_container {
+            width: 100vw;
+            .general-1 {
+                width: 100%;
+                padding: 30px;
+                text-align: center;
+            }
+            .sucursales,
+            .metodos_pago,
+            .ventas {
+                display: none;
+            }
+        }
+    }
+
+}

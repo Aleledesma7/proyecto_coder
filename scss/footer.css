@@ -1,0 +1,66 @@
+@keyframes logoAnimation {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: inherit;
+  background-color: #000;
+  padding: 12px 25px;
+}
+.footer .footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 2rem;
+  flex: 0.5;
+}
+.footer .footer-content ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rm;
+}
+.footer .footer-content h3 {
+  font-size: 18px;
+  color: #f9fafc;
+  margin-bottom: 15px;
+}
+.footer .footer-content a {
+  font-size: 16px;
+  color: #f9fafc;
+  display: block;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 991px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
+    gap: inherit;
+    flex: 1;
+  }
+  .footer .footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: space-between;
+    gap: inherit;
+    text-align: center;
+  }
+  .footer .footer-content a {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=footer.css.map */

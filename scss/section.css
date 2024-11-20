@@ -1,0 +1,122 @@
+@keyframes logoAnimation {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.pizza {
+  width: 100vw;
+  background-color: rgba(225, 226, 229, 0.7019607843);
+  position: relative;
+  padding: 30px 0;
+}
+.pizza .pizza-img {
+  position: absolute;
+  top: 0;
+  right: -8vw;
+}
+.pizza .pizza-content {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: inherit;
+}
+.pizza .pizza-content .txt-p {
+  font-size: 16px;
+  color: #323337;
+  padding: 0 250px;
+  margin-bottom: 35px;
+}
+.pizza .pizza-content h2 {
+  font-size: 55px;
+  line-height: 70px;
+  color: #323337;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.pizza .pizza-content .pizza-group {
+  max-width: 80vw;
+  display: flex;
+  flex-direction: row;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.pizza .pizza-content .pizza-group .pizza-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  gap: inherit;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 25px;
+  cursor: pointer;
+  transition: color 180ms ease-in, scale 100ms ease-in;
+  border-radius: 10px;
+}
+.pizza .pizza-content .pizza-group .pizza-1 .pizza-1_image-container {
+  transition: color 180ms ease-in, scale 100ms ease-in;
+  flex: 1;
+}
+.pizza .pizza-content .pizza-group .pizza-1 .pizza-1_image-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.pizza .pizza-content .pizza-group .pizza-1 h3 {
+  transition: color 180ms ease-in;
+  color: #323337;
+  font-size: 20px;
+}
+.pizza .pizza-content .pizza-group .pizza-1 p {
+  transition: color 180ms ease-in;
+}
+.pizza .pizza-content .pizza-group .pizza-1 .pizza-1_price {
+  transition: color 180ms ease-in, scale 100ms ease-in;
+}
+.pizza .pizza-content .pizza-group .pizza-1 .pizza-1_price:hover {
+  cursor: pointer;
+  color: #b41e00;
+  scale: 1.1;
+}
+.pizza .pizza-content .pizza-group .pizza-1:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  scale: 1.01;
+}
+.pizza .pizza-content .pizza-group .pizza-1:hover .pizza-1_image-container {
+  scale: 1.2;
+  filter: drop-shadow(0 0 4px #323337);
+}
+.pizza .pizza-content .pizza-group .pizza-1:hover h3 {
+  color: #f9fafc;
+  font-size: 20px;
+}
+.pizza .pizza-content .pizza-group .pizza-1:hover p {
+  color: #f9fafc;
+}
+
+@media (max-width: 991px) {
+  .pizza {
+    padding: 30px;
+  }
+  .pizza .pizza-content h2 {
+    padding: 0;
+  }
+  .pizza .pizza-content .txt-p {
+    padding: 0;
+  }
+  .pizza .pizza-content .pizza-group {
+    flex-direction: column;
+    margin-bottom: 0;
+    position: relative;
+  }
+}/*# sourceMappingURL=section.css.map */

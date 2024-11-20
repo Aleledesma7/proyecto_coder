@@ -1,0 +1,141 @@
+@use './_variables.scss' as *;
+
+.menu {
+    @include flexBox(row, center, space-evenly, inherit);
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    background-color: $transparentBlack60p;
+    box-shadow: 0 0 1px 2px $transparentBlack40p;
+
+    .logo {
+        width: 100px;
+        animation: logoAnimation 2s linear .1s infinite;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        display: none;
+    }
+
+    .navbar {
+        .menu-icono {
+            width: 25px;
+        }
+
+        ul {
+            li {
+                position: relative;
+                float: left;
+                z-index: 10;
+
+                a {
+                    font-size: 18px;
+                    padding: 20px;
+                    color: $lightWhite;
+                    display: block;
+                    font-weight: 600;
+                    @include transitionButton();
+                }
+
+                a:hover {
+                    @include buttonHover(transparent, $bordo);
+                }
+
+                a:active {
+                    @include buttonClicked();
+                }
+            }
+        }
+    }
+}
+
+
+.header {
+    padding-top: 12vh;
+    padding-bottom: 6rem;
+    @include flexBox(column, center, normal, inherit);
+
+
+    .header-content {
+        text-align: center;
+    }
+
+    .header-content {
+        h1 {
+            font-size: 75px;
+            line-height: 80px;
+            color: $softGray;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+    }
+
+    .header-content {
+        p {
+            font-size: 15px;
+            color: $gray;
+            padding: 0 250px;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+
+    .pizza-img {
+        display: none;
+    }
+
+    .menu {
+        position: sticky;
+        z-index: 10;
+        top: 0;
+        width: 100vw;
+        padding: 0;
+
+        #menu:checked~.navbar {
+            display: initial;
+        }
+
+        label {
+            display: initial;
+            scale: 0.5;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $darkGray;
+            display: none;
+            z-index: 10;
+
+            ul {
+                li {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .header {
+        min-height: inherit;
+        padding: 0;
+
+        .header-content {
+            padding: 50px 30px;
+
+            p {
+                padding: 0;
+            }
+        }
+
+    }
+}
