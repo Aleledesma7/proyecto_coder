@@ -1,12 +1,4 @@
-@use './_variables.scss' as *;
-@use './header.scss' as *;
-@use './general.scss' as *;
-@use './section.scss' as *;
-@use './services.scss' as *;
-@use './footer.scss' as *;
-@use './sucursales.scss' as *;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-
+@use './variables' as *;
 
 * {
     margin: 0;
